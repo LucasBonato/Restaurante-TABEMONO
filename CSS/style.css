@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-margin: 150px;
+}
+
+:root {
+    --cem-porc: 100%;
+    --cor-Principal: #111111;
+    --cor-Branco: #fff;
+}
+
+
+body {
+    background-color: var(--cor-Principal);
+    color: var(--cor-Branco);
+}
+
+/* Cabeçalho */
+
+header {
+    width: var(--cem-porc);
+    background-color: var(--cor-Principal);
+    position: fixed;
+    top: 0px;
+    border-bottom: solid 1px var(--cor-Branco);
+    z-index: 10;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
+div.circle {
+    background-color: var(--cor-Branco);
+    border-radius: 50%;
+}
+
+a.linkHeader {
+    font-size: 30pt;
+    text-decoration: none;
+    color: var(--cor-Branco);
+    display: inline-block;
+    padding-bottom: 2px;
+    background-image: linear-gradient(var(--cor-Branco) 0 0);
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition: 
+    background-size 0.3s,
+    background-position 0s 0.3s;
+}
+
+a.linkHeader:hover {
+    background-position: 100% 100%;
+    background-size: 100% 2px;
+}
+
+/* Corpo principal */
+
+
+main {
+    padding-top: 8%;
+    margin: 2%;
+    height: var(--cem-porc);
+}
+
+h1 {
+    font-size: 50pt;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+div.back-image img {
+    width: var(--cem-porc);
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+/*Cardápio*/
+
+h2 {
+    font-size: 30pt;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+section.listas ul {
+    list-style: none;
+    width: 256px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 25pt;
+    margin-bottom: 5%;
+}
+
+section.listas {
+    display: flex;
+    justify-content: space-evenly;
+    height: max(2600px, auto);
+}
+
+section.listas li img {
+    height: 256px;
+    width: 256px;
+    border-radius: 5%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+section.listas ul img:hover {
+    transform: scale(1.1) rotate(1deg);
+}
+
+section.listas ul li p {
+    width: var(--cem-porc);
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+section.listas ul li span {
+    display: block;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 1.5%;
+    border: var(--cor-Branco) solid 2px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 5% auto 0;
+}
+
+/*Forumulário*/
+
+section.blockForm {
+    background-color: rgba(56, 56, 56, .4);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form p {
+    font-size: large;
+}
+
+form input.texto {
+    width: 400px;
+    height: 50px;
+}
+
+/*Sobre*/
+
+article.sobre {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 0;
+}
+
+.espacamento {
+    height: 100px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #222222;
+    height: 350px;
+}
+
+div.gradiente {
+    background-image: linear-gradient(0deg, #222222, var(--cor-Principal));
+    height: 100px;
+}
+
+section.final {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.final article p{
+    color: #868686;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+section.final article a.linkRodape {
+    text-decoration: none;
+    color: #868686;
+}
+
+section.final iframe {
+    width: 240px;
+    height: 180px;
+    border-radius: 10px;
+}
