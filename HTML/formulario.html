@@ -22,16 +22,27 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="blockForm">
-                <form action="">
-                    <h2>Entre em contato</h2>
-                    <div>
-                        <label for="firstName">Name</label>
-                        <input type="text" name="firstName" id="">
-                    </div>
+        <main id="forms">
+
+                <form action="mailto:lucasperezbonato@gmail.com" method="post" enctype="text/plain">
+                    <legend>Contacte nos</legend>
+                    <article class="textInput">
+                        <input type="text" name="name" id="name" class="teste" autocomplete="off" oninput="Alterar(event)">
+                        <label for="name">Nome</label>
+                    </article>
+                    <article class="textInput">
+                        <input type="text" name="mail" id="mail" class="teste" autocomplete="off" oninput="Alterar(event)">
+                        <label for="mail">Email</label>
+                    </article>
+                    <article class="textInput">
+                        <textarea name="" id="" cols="30" rows="10" maxlength="300"></textarea>
+                    </article>
+                    <article class="btnsFinais">
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Enviar" class="btnEnviar">
+                    </article>
                 </form>
-            </section>
+
         </main>
         <footer>
                 <div class="gradiente"></div>
@@ -50,5 +61,6 @@
                     </article>
                 </section>
         </footer>
+        <script src="../JS/form.js"></script>
     </body>
 </html>
