@@ -21,9 +21,10 @@ const Show = () => {
 }
 
 for (let i = 0; i < inpuLengh; i++){
-    inputs[i].addEventListener("click", function Change() {
+    inputs[i].addEventListener("click", () => {
         clearInterval(timer);
         eleImg.src = imgs[i];
+        count = i;
         timer = setInterval("Show()", time);
     });
 }
