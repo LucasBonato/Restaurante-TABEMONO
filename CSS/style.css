@@ -77,7 +77,7 @@ a.linkHeader:hover {
 
 
 main {
-    padding-top: 8%;
+    padding-top: 6%;
     margin: 2%;
     height: var(--cem-porc);
 }
@@ -89,10 +89,33 @@ h1 {
     margin-bottom: 1%;
 }
 
-div.back-image img {
+article.back-image img {
     width: var(--cem-porc);
     border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+article.back-image form {
+    margin: 0 auto;
+    border: 0;
+    flex-direction: row;
+    justify-content: space-around;
     margin-bottom: 3%;
+    width: 5%;
+    height: auto;
+}
+
+article.back-image input {
+    appearance: none;
+    border-radius: 50%;
+    border: 2px solid #999;
+    width: 15px;
+    height: 15px;
+    transition: 0.2s all linear;
+}
+
+article.back-image input:checked {
+    border: 6px solid var(--cor-Branco);
 }
 
 /*Cardápio*/
