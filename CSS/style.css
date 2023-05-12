@@ -263,46 +263,57 @@ form {
     margin-top: 2%;
     margin-bottom: 5%;
     border-radius: 20px;
+    padding: 1%;
 }
 
 legend {
     font-size: 2.5rem;
 }
 
-.textInput {
+.textInput{
     position: relative;
 }
 
-.textInput label {
+.formInput{
+    font-size: 1rem;
+    border: 2px solid #888888;
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+    color: #fff;
+}
+
+.formLabel{
     position: absolute;
-    top: 50%;
-    translate: 0 -50%;
-    pointer-events: none;
-    color: #888888;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 .25rem;
+    background-color: #111;
+    color: #fff;
+    font-size: 1rem;
     transition: .3s;
 }
 
-.textInput > label {
-    left: 10px;
-    translate: 0 -50%;
-    padding: 4px 8px;
+.formInput:focus + .formLabel{
+    top: -.5rem;
+    left: .8rem;
+    font-size: .75rem;
+    font-weight: 500;
+    z-index: 10;
 }
 
-.textInput > input {
-    height: 50px;
-    width: 220px;
-    padding-left: 16px;
-    border: 2px solid #888888;
-    border-radius: 8px;
-    background: transparent;
-    color: #f9f9f9;
+.formInput:not(:placeholder-shown).formInput:not(:focus)+ .formLabel{
+    top: -.5rem;
+    left: .8rem;
+    font-size: .75rem;
+    font-weight: 500;
+    z-index: 10;
 }
 
-.textInput :is(.teste:focus, .temValor,) ~ label {
-    background: #111111;
-    border-radius: 10px;
-    color: rgb(255, 255, 255/85%);
-    translate: 0 -40px;
+.formInput:focus{
+    border: 2px solid #fff;
 }
 
 textarea {
@@ -310,6 +321,11 @@ textarea {
     border: 2px solid #888888;
     border-radius: 10px;
     color: var(--cor-Branco);
+    resize: none;
+}
+
+textarea:focus {
+    border: 2px solid #fff;
 }
 
 .btnsFinais {
